@@ -36,8 +36,6 @@ Load WiFi SSID & Pass and MQTT IP Address:
 #define BUTTON2_PIN 26  //Button Plus
 #define BUTTON3_PIN 27  //Button Enter
 
-#define RELAY_PIN 19
-
 unsigned long mqttLastEvent;
 unsigned long mqttInterval = 60000; //ms
 unsigned long reconnectInterval = 5000; //ms
@@ -148,7 +146,7 @@ ButtonClass buttonEnter(
 Sht40Class sht40(I2C_ADDRESS_SHT40);
 
 TempControlClass tempControl(
-  &sht40, sensorInterval, tempSetMin, tempSetMax, defaultRoom, RELAY_PIN);
+  &sht40, sensorInterval, tempSetMin, tempSetMax, defaultRoom);
 
 void MqttCallback(char* topic, byte* message, unsigned long length);
 MqttClass mqtt(mqttServer, MqttCallback);
