@@ -117,7 +117,7 @@ const char* mqttRelayKeys[] = {
   "relay_WKR",
   "relay_BDR",
   "relay_BHR",
-  "rekat_OUT"
+  "relay_OUT"
 };
 const char* mqttOtherKeys[] = {
   "heating_enabled",
